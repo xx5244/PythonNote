@@ -39,6 +39,22 @@
     | -vol             | 設定音量大小，256為標準音量                                        |
 
 + ## 範例
+  + ### 影片轉檔
+    用`-i`放入欲轉檔的檔案，後面接著放欲輸出的檔案
+    ```
+    ffmpeg -i input_video output_video
+    ```
+  
+  + ### 影片快速合併
+    用`-f concat -safe 0 -i`放入統整欲合併檔名的`txt`檔`-c copy`再放入欲輸出的檔案
+    ```
+    ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video
+    ```
+    PS:
+    `-f concat`設定輸出格式為合併
+    `－safe 0`若輸入路徑是相對路徑則不需要
+    `-c copy`為不重新編碼
+
 + ## 參考資料
     ```
     [ffmpeg](https://ffmpeg.org/)
