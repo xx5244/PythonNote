@@ -66,7 +66,13 @@
     `-c copy` 免重新編碼
   
   + ### 擷取視訊
+    ```
+    ffmpeg -i file_name -an -c copy output_video
+    ```
   + ### 擷取音訊
+    ```
+    ffmpeg -i file_name -vn -c copy output_audio
+    ```
   + ### 上字幕
   + ### 畫面旋轉
   + ### 播放速度調整
