@@ -1,3 +1,8 @@
-from DEMO.test import my_sum
+import pyautogui
+import time
 
-print(my_sum(1, 2, 3))
+time.sleep(3)
+
+
+pyautogui.screenshot('test.png', region=(0,0, 300, 600))
+
